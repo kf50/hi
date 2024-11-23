@@ -46,17 +46,17 @@
             left: 50%;
             transform: translateX(-50%);
             padding: 10px 20px;
-            background-color: #ff5500;
+            background-color: black;
             color: white;
             border: none;
-            font-size: 20px;
+            font-size: 40px; /* Increase font size for "?" */
             cursor: pointer;
             z-index: 2; /* Ensure the button stays above everything else */
             border-radius: 5px;
         }
 
         #playButton:hover {
-            background-color: #ff7700;
+            background-color: #444444; /* Darker shade on hover */
         }
     </style>
 
@@ -125,8 +125,8 @@
 </head>
 <body>
 
-    <!-- Play Music Button -->
-    <button id="playButton" onclick="playMusic()">Play Babytron</button>
+    <!-- Play Music Button with "?" -->
+    <button id="playButton" onclick="playMusic()">?</button>
 
     <!-- Fullscreen Background Image -->
     <img src="babytron.gif" alt="Background Image" />
