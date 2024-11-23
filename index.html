@@ -39,24 +39,20 @@
             z-index: 1; /* Ensures the text stays above the image */
         }
 
-        /* Button styling */
-        #playButton {
+        /* Styling for the clickable text */
+        #playText {
             position: absolute;
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            padding: 10px 20px;
-            background-color: black;
+            font-size: 40px;
             color: white;
-            border: none;
-            font-size: 40px; /* Increase font size for "?" */
             cursor: pointer;
-            z-index: 2; /* Ensure the button stays above everything else */
-            border-radius: 5px;
+            z-index: 2; /* Ensure the clickable text stays above everything else */
         }
 
-        #playButton:hover {
-            background-color: #444444; /* Darker shade on hover */
+        #playText:hover {
+            color: #ff5500;
         }
     </style>
 
@@ -118,6 +114,8 @@
         function playMusic() {
             var audio = document.getElementById("babytronAudio");
             audio.play();
+            // Hide the clickable text once clicked
+            document.getElementById("playText").style.display = 'none';
         }
         // ]]>
     </script>
@@ -125,8 +123,8 @@
 </head>
 <body>
 
-    <!-- Play Music Button with "?" -->
-    <button id="playButton" onclick="playMusic()">?</button>
+    <!-- Clickable Text "?" before the rest of the page loads -->
+    <span id="playText" onclick="playMusic()">?</span>
 
     <!-- Fullscreen Background Image -->
     <img src="babytron.gif" alt="Background Image" />
