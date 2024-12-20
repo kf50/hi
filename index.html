@@ -1,1 +1,26 @@
-<title> nigga </title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swatttttttts</title>
+</head>
+<body>
+    <script>
+      
+        const path = window.location.pathname;
+
+        const videoMapping = {
+            "/mp4": "https://swatcity.fun/kfcswat.mp4",
+            "/kfcswat.mp4": "https://swatcity.fun/swatcall.mp4"
+        };
+
+        if (videoMapping[path]) {
+       L
+            window.location.href = videoMapping[path];
+        } else {
+            document.body.innerHTML = "<h1>Video not found</h1>";
+        }
+    </script>
+</body>
+</html>
